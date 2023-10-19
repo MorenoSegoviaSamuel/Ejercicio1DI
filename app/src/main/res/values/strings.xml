@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ejercicio1DI</string>
+    <string name="phonetic_name">Phonetic Name</string>
+    <string name="nickname">Nickname</string>
+    <string name="name">Name</string>
+    <string name="Phone">Phone</string>
+    <string name="CHANGE">Change</string>
+    <string name="Email">E-mail</string>
+</resources>
