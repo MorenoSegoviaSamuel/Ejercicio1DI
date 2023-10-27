@@ -6,4 +6,7 @@
     <string name="Phone">Phone</string>
     <string name="CHANGE">Change</string>
     <string name="Email">E-mail</string>
+    <string name="action_settings">Accion</string>
+    <string name="action_buscar">buscar</string>
+    <string name="action_add">AccionAñadir</string>
 </resources>
