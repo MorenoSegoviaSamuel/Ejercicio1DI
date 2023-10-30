@@ -9,4 +9,10 @@
     <string name="action_settings">Accion</string>
     <string name="action_buscar">buscar</string>
     <string name="action_add">AccionAñadir</string>
+    <string name="ElegirOpcion">Elige una opción:</string>
+    <string name="AngryBirds">Angry Birds</string>
+    <string name="DragonFly">Dragon Fly</string>
+    <string name="HillClimbing">Hill Climbing racing</string>
+    <string name="PocketSoccer">Pocket Soccer</string>
+    <string name="RadiantDefense">Radiant Defense</string>
 </resources>

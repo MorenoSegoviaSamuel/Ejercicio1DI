@@ -82,29 +82,44 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/editTextText4"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="@string/name" />
+                    android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/editTextText5"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="@string/phonetic_name" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextText4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name"
+                        android:inputType="text" />
 
-                <EditText
-                    android:id="@+id/editTextText6"
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="@string/nickname" />
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextText5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phonetic_name"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextText6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nickname"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -184,14 +199,18 @@
                 android:layout_margin="15dp"
                 app:srcCompat="@android:drawable/sym_action_email" />
 
-            <EditText
-                android:id="@+id/editTextText8"
-                android:layout_width="310dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="20dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/Email" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextText8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Email"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
     </TableLayout>
 </ScrollView>

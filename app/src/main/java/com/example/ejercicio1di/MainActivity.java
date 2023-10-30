@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
      Button newPlayer;
+     Button preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         newPlayer= findViewById(R.id.button2);
         newPlayer.setOnClickListener(this::lanzarNewPlayer);
 
+        preferences = findViewById(R.id.button3);
+        preferences.setOnClickListener(this::lanzarPreferences);
+
     }
 
     public void lanzarNewPlayer(View view) {
@@ -29,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(this,NewPlayer.class);
         startActivity(intent);
     }
+
+    public void lanzarPreferences(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, Preferences.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_main, menu);
