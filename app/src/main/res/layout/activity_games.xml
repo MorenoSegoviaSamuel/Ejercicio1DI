@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_weight="@integer/material_motion_duration_long_2"
+        android:background="@color/ColorBoton"
+        android:minHeight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:text="Play juegos"
+            android:textColor="@color/white"
+            android:textSize="20dp"></TextView>
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="#00FFFFFF"
+            app:srcCompat="@android:drawable/ic_menu_share" />
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="#00FFFFFF"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="#00FFFFFF"
+            app:srcCompat="@android:drawable/ic_menu_search" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="409dp"
+        android:layout_height="670dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="#74E43B43">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/games_angrybirds" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        android:layout_width="208dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/AngryBirds" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="#74E43B43">
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/games_dragonfly" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox3"
+                        android:layout_width="208dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/DragonFly" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="#74E43B43">
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/games_hillclimbingracing" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox4"
+                        android:layout_width="208dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/HillClimbing" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="#74E43B43">
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/games_radiantdefense" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox5"
+                        android:layout_width="208dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/RadiantDefense" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="#74E43B43">
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/games_pocketsoccer" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox6"
+                        android:layout_width="208dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/PocketSoccer" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="#74E43B43">
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/games_ninjump" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox7"
+                        android:layout_width="208dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/ninjump" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="#74E43B43">
+
+                    <ImageView
+                        android:id="@+id/imageView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/games_aircontrol" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox8"
+                        android:layout_width="208dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/aircontrol" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:src="@android:drawable/ic_input_add" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

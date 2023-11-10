@@ -15,4 +15,6 @@
     <string name="HillClimbing">Hill Climbing racing</string>
     <string name="PocketSoccer">Pocket Soccer</string>
     <string name="RadiantDefense">Radiant Defense</string>
+    <string name="ninjump">Ninja Jump</string>
+    <string name="aircontrol">Air control</string>
 </resources>

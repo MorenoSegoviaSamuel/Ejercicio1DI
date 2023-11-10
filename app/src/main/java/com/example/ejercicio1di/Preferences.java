@@ -21,6 +21,8 @@ public class Preferences extends AppCompatActivity {
 
     FloatingActionButton fab;
 
+    private float valorComun = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,16 +32,19 @@ public class Preferences extends AppCompatActivity {
         seekBar = findViewById(R.id.seekBar);
         fab = findViewById(R.id.fab);
 
+
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-
+                valorComun = rating;
+                seekBar.setProgress((int) valorComun);
             }
         });
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
+                valorComun = progress;
+                ratingBar.setRating(valorComun);
             }
 
             @Override

@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,22 +16,45 @@ public class MainActivity extends AppCompatActivity {
      Button newPlayer;
      Button preferences;
 
+     Button games;
+
+     ImageButton opciones;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        newPlayer= findViewById(R.id.button2);
+        newPlayer= findViewById(R.id.newPlayer);
         newPlayer.setOnClickListener(this::lanzarNewPlayer);
 
-        preferences = findViewById(R.id.button3);
+        preferences = findViewById(R.id.preferences);
         preferences.setOnClickListener(this::lanzarPreferences);
+
+        games = findViewById(R.id.play);
+        games.setOnClickListener(this::lanzarGames);
+
+        opciones = findViewById(R.id.opciones);
+        opciones.setOnClickListener(this::lanzarOpciones);
+
+
 
     }
 
     public void lanzarNewPlayer(View view) {
         Intent intent = new Intent();
         intent.setClass(this,NewPlayer.class);
+        startActivity(intent);
+    }
+    public void lanzarOpciones(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, Opciones.class);
+        startActivity(intent);
+    }
+
+    public void lanzarGames(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, Games.class);
         startActivity(intent);
     }
 

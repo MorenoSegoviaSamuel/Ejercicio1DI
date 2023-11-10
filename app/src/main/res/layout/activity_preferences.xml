@@ -83,15 +83,17 @@
         android:layout_width="331dp"
         android:layout_height="55dp"
         android:layout_marginTop="25dp"
+        android:max="7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="331dp"
-        android:layout_height="34dp"
+        android:layout_width="302dp"
+        android:layout_height="30dp"
         android:layout_marginTop="25dp"
+        android:max="7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
