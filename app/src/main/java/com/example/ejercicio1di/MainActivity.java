@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
      ImageButton opciones;
 
+     Button about;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         opciones = findViewById(R.id.opciones);
         opciones.setOnClickListener(this::lanzarOpciones);
 
+        about = findViewById(R.id.about);
+        about.setOnClickListener(this::lanzarAbout);
 
 
     }
@@ -61,6 +65,12 @@ public class MainActivity extends AppCompatActivity {
     public void lanzarPreferences(View view) {
         Intent intent = new Intent();
         intent.setClass(this, Preferences.class);
+        startActivity(intent);
+    }
+
+    public void lanzarAbout(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this,About.class);
         startActivity(intent);
     }
 

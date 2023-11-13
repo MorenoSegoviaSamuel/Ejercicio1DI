@@ -1,26 +1,37 @@
 package com.example.ejercicio1di;
-
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.chip.Chip;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.List;
+
 public class Opciones extends AppCompatActivity {
-    private ListView listView;
+
+    private final List<String> genres = List.of("Acción", "Aventura", "Deportes", "Disparos", "Estrategia", "Lucha", "Musical", "Rol", "Simulación");
+    private RecyclerView listView;
     private FloatingActionButton fab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opciones);
 
-        listView = findViewById(R.id.listview);
+        listView = findViewById(R.id.RecyclerView);
         fab = findViewById(R.id.fab);
 
         fab.setOnClickListener(v -> {
@@ -29,12 +40,16 @@ public class Opciones extends AppCompatActivity {
             a.show();
         });
 
-        String[] generos = {"Accion","Aventura","Deportes","Disparos","Estrategia","Lucha","Musical","Rol","Simulacion"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, generos);
+        GenerosAdapter adapter = new GenerosAdapter(genres, this);
+        listView.setLayoutManager(new LinearLayoutManager(this));
 
         listView.setAdapter(adapter);
+    }
 
-        listView.setOnItemClickListener((parent, view, position, id) -> Toast.makeText(this, parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show());
+    public void showChip(View view){
+        Chip chip = (Chip) view;
+
+        Toast.makeText(this, chip.getText().toString(), Toast.LENGTH_SHORT).show();
     }
 
 }
