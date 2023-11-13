@@ -17,4 +17,16 @@
     <string name="RadiantDefense">Radiant Defense</string>
     <string name="ninjump">Ninja Jump</string>
     <string name="aircontrol">Air control</string>
+
+    <string-array name="telefonos">
+        <item>Telefono1</item>
+        <item>Telefono2</item>
+        <item>Telefono3</item>
+        <item>Telefono4</item>
+        <item>Telefono5</item>
+        <item>Telefono6</item>
+        <item>Telefono7</item>
+        <item>Telefono8</item>
+
+    </string-array>
 </resources>
